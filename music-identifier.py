@@ -2,10 +2,11 @@ import requests
 import json
 import os, sys
 from acrcloud.recognizer import ACRCloudRecognizer
+import secrets
 
 
-"""user_id = "4a6e87a41d2045dbbb603d14b23192bd"
-client_secret="678b6935100e4f329c78e23d929930c3"
+"""user_id = secrets.user_id
+client_secret=secrets.client_secret
 
 
 request_body = json.dumps({
@@ -24,7 +25,6 @@ response=requests.post(
 )"""
 
 if __name__ == '__main__':
-
     if(len(sys.argv) != 2):
         print("usage: sudo python muic-identifier.py <path>")
     else:
